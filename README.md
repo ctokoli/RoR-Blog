@@ -85,7 +85,7 @@ Clone this repository to your desired folder:
 ### Run Test
 To run the testing, execute the following command:
 ```
-rspec spec --format documentation
+rspec spec 
 ```
 
 <!-- AUTHORS -->
