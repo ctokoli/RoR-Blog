@@ -1,6 +1,7 @@
 class Posts < ApplicationRecord
-  belongs_to :user, foreign_key: :author
+  belong_to :author, className: 'User'
   has_many :comments
+  has_many :likes
 
   after_create :update_user_post_count
   after_destroy :update_user_post_count
