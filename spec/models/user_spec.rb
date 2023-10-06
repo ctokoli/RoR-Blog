@@ -13,7 +13,7 @@ RSpec.describe User, type: :model do
       expect(subject).to_not be_valid
     end
   end
-  
+
   describe 'User counter validation ' do
     it 'posts_counter should be an integer' do
       subject.posts_counter = 8
