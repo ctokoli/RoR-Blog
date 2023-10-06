@@ -1,7 +1,12 @@
-class Posts < ApplicationRecord
-  belong_to :author, className: 'User'
+class Post < ApplicationRecord
+  belongs_to :author, class_name: 'User'
   has_many :comments
   has_many :likes
+
+  attribute :title, :string
+  attribute :text, :text
+  attribute :comments_counter, :integer, default: 0
+  attribute :likes_counter, :integer, default: 0
 
   after_create :update_user_post_count
   after_destroy :update_user_post_count
