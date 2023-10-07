@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Comment, type: :model do
   describe 'Comment Model Method test' do
     user = User.create(name: 'Harry')
-    post = Post.create(title: 'Title', author: user)
+    post = Post.create(title: 'Title')
     comment = Comment.create(text: 'Text', author: user, post: post)
 
     it 'should update comments_counter after create' do

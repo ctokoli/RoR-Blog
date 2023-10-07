@@ -27,4 +27,17 @@ RSpec.describe Post, type: :model do
       expect(subject).to_not be_valid
     end
   end
+
+  describe 'Post Model method tests' do
+    it 'should return five recent comments' do
+      post = Post.create(title: 'Title', author: User.create(name: 'KOJO'))
+      expect(post.recent_comments).to eq([])
+    end
+
+    it 'should update comments_counter after create' do
+      post = Post.create(title: 'Title', author: User.create(name: 'KOJO'))
+      result = post.update_user_post_count
+      expect(result).to eq(true)
+    end
+  end
 end

@@ -14,6 +14,19 @@ RSpec.describe User, type: :model do
     end
   end
 
+  describe 'User Model method tests' do
+    it 'should return three recent posts' do
+      author = User.create(name: 'Harry')
+      post1 = Post.create(title: 'Title1', author: author)
+      post2 = Post.create(title: 'Title2', author: author)
+      post3 = Post.create(title: 'Title3', author: author)
+      post4 = Post.create(title: 'Title4', author: author)
+      post5 = Post.create(title: 'Title5', author: author)
+      post6 = Post.create(title: 'Title6', author: author)
+      expect(author.recent_posts).to eq([post6, post5, post4])
+    end
+  end
+
   describe 'User counter validation ' do
     it 'posts_counter should be an integer' do
       subject.posts_counter = 8
