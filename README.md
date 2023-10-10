@@ -71,7 +71,7 @@ In order to run this project you need:
 Clone this repository to your desired folder:
 
 ```sh
-  cd my-folder
+  cd Blog
   gh repo clone https://github.com/ctokoli/Blog.git
 ```
 
