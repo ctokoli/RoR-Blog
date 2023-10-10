@@ -72,7 +72,7 @@ Clone this repository to your desired folder:
 
 ```sh
   cd my-folder
-  gh repo clone https://github.com/Zafron047/Blog_app_by_Rails.git
+  gh repo clone https://github.com/ctokoli/Blog.git
 ```
 
 ### Install
@@ -115,7 +115,7 @@ Features will be added to the project.
 ## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
-Feel free to check the <a href="https://github.com/Zafron047/Blog_app_by_Rails/issues">Issues</a>.
+Feel free to check the <a href="https://github.com/ctokoli/Blog/issues">Issues</a>.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
