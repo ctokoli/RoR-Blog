@@ -24,5 +24,4 @@ class Post < ApplicationRecord
   def update_post_counter
     author.increment!(:postsCounter)
   end
-  
 end
