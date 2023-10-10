@@ -8,8 +8,8 @@ default: &default
   adapter: postgresql
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
-  username: postgresql
-  password: <%= ENV['APPNAME_DATABASE_PASSWORD'] %>
+  username: postgres
+  password: root
 
 development:
   <<: *default
