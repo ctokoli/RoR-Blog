@@ -23,7 +23,7 @@ RSpec.describe User, type: :model do
       expect(author.most_recent_posts).to eq([post6, post5, post4])
     end
   end
-  
+
   describe 'User counter validation ' do
     it 'posts_counter should be an integer' do
       subject.postsCounter = 8
