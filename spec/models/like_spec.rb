@@ -7,7 +7,6 @@ RSpec.describe Like, type: :model do
     puts post.inspect
     like = Like.create(user: user, post: post)
 
-
     it 'should update likes_counter after create' do
       like.updates_likes_counter
       result = post.update_post_counter
