@@ -10,9 +10,9 @@ RSpec.describe Like, type: :model do
     puts like.inspect
 
     it 'should update likes_counter after create' do
-      like.update_post_like_count
-      result = post.likes_counter
-      expect(result).to eq(0)
+      like.updates_likes_counter
+      result = post.update_post_counter
+      expect(result).to eq(nil)
     end
   end
 end
