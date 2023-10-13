@@ -1,1 +1,26 @@
-<h1>This page contains a list of Users</h1>
+<div class="container">
+    <%if @users.empty?%>
+        <h2>No User yet</h2>
+    <%end%>
+    <%@users.each do |user|%>
+        <div class="content-container">
+            <div class="image">
+            <%=image_tag user.photo%>
+            </div>
+            
+              <div class="content">
+                <a href="/users/<%= user.id %>">
+                    <ul class="list"> 
+                    <li><h3><%=user.name%></h3></li>
+                    </ul>
+                </a>
+                <div class="post">
+                    <p>Number of posts: <%= user.postsCounter%></p>
+                </div>
+              </div>
+            
+        </div>
+    <%end%>
+</div>
+
+
