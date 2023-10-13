@@ -1,1 +1,41 @@
-<h1>More details of a specific user</h1>
+<div class="container">
+        <div class="content-container">
+            <div class="image">
+              <%=image_tag @user.photo%>
+            </div>
+            
+              <div class="content">
+                <a href="#">
+                    <ul class="list"> 
+                    <li><h3><%= @user.name%></h3></li>
+                    </ul>
+                </a>
+                <div class="post">
+                    <p>Number of posts: <%= @user.postsCounter%></p>
+                </div>
+              </div>
+            
+        </div>
+        <div class="bio">
+            <h3>Bio</h3>
+            <p><%= @user.bio%></p>
+        </div>
+        
+        <div class="posts ">
+          <%if @posts.empty?%>
+            <h2>No Post yet</h2>
+          <%end%>
+          <% @posts.each_with_index do |post, index| %>
+            <div class="post-content bio">
+                <a href="/users/<%= post.author_id%>/posts/<%= post.id%>"><h3>Post# <%= index+1 %></h3></a>
+                <p><%= post.text%></p>
+                <div class="counts">
+                    <p>Comments: <%= post.comments_counter%></p>
+                    <p>Likes: <%= post.likes_counter%></p>
+                </div>
+            </div>
+          <%end%>
+        </div>
+</div>
+
+
