@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-  before_action :set_post, :user_id
+  before_action :set_post
   def new
     @comment = Comment.new
   end
