@@ -1,5 +1,6 @@
 <div class="container">
   <h1>Create New Post</h1>
+  <%=@user.name%>
   <%= form_with(model: [@user, @post], url: user_posts_path(@user)) do |f| %>
     <div class="f-post">
       <div class="f-label">
