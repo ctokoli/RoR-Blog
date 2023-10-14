@@ -108,7 +108,7 @@ input.btn.center-btn {
 
 .link {
   position: relative;
-  left: 544px;
+  left: 530px;
   margin-top: -50px;
 }
 
@@ -116,4 +116,10 @@ input.btn.center-btn {
   position: relative;
   left: 610px;
   margin-bottom: 30px;
+}
+
+.link a {
+  background-color: #f2f2f2;
+  padding: 5px 10px;
+  border: 1px solid;
 }
