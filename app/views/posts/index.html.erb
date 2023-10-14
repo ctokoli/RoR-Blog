@@ -1,1 +1,49 @@
-<h1>This page contains a list of Post</h1>
+<div class="container">
+        <div class="content-container">
+            <div class="image">
+              <%=image_tag @user.photo%>
+            </div>
+            
+              <div class="content">
+                <a href="#">
+                    <ul class="list"> 
+                    <li><h3><%= @user.name%></h3></li>
+                    </ul>
+                </a>
+                <div class="post">
+                    <p>Number of posts: <%= @user.postsCounter%></p>
+                </div>
+              </div>
+            
+        </div>
+        
+        <div class="posts ">
+          <%if @posts.empty?%>
+            <h2>No Post yet</h2>
+          <%end%>
+          <% @posts.each_with_index do |post, index| %>
+          <a href="/users/<%= post.author_id%>/posts/<%= post.id%>">
+            <div class="post-content bio">
+                <h3>Post# <%= index+1 %></h3>
+                <p><%= post.text%></p>
+                <div class="counts-section">
+                   <div class="counts">
+                        <p>Comments: <%= post.comments_counter%></p>
+                        <p>Likes: <%= post.likes_counter%></p>
+                   </div>
+                </div>
+            </div>
+           </a>
+            <div class="comments bio">
+                        <h3>Comments</h3>
+                        <% post.comments.each do |comment| %>
+                            <div class="comment">
+                            <% user_id = comment.user_id %>
+                            <strong><%= user = User.find(user_id).name %></strong>
+                            <p><%= comment.text%></p>
+                            </div>
+                        <%end%>
+                </div>
+          <%end%>
+        </div>
+</div>
