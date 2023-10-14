@@ -79,16 +79,16 @@ ul.list {
 }
 
 .f-label {
-    display: flex;
-    flex-direction: column;
-    width: 368px;
+  display: flex;
+  flex-direction: column;
+  width: 368px;
 }
 
 .input {
-    padding: 8px 0px;
-    margin: 10px 0px;
+  padding: 8px 0;
+  margin: 10px 0;
 }
 
 input.btn.center-btn {
-    padding: 6px 10px;
+  padding: 6px 10px;
 }
