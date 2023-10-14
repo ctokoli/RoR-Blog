@@ -77,3 +77,18 @@ ul.list {
   align-items: center;
   justify-content: space-between;
 }
+
+.f-label {
+    display: flex;
+    flex-direction: column;
+    width: 368px;
+}
+
+.input {
+    padding: 8px 0px;
+    margin: 10px 0px;
+}
+
+input.btn.center-btn {
+    padding: 6px 10px;
+}
