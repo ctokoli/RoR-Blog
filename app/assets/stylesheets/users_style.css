@@ -92,3 +92,28 @@ ul.list {
 input.btn.center-btn {
   padding: 6px 10px;
 }
+
+.post-btn a button {
+  position: relative;
+  left: 578px;
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.post-btn {
+  width: 668px;
+  margin-bottom: 18px;
+}
+
+.link {
+  position: relative;
+  left: 544px;
+  margin-top: -50px;
+}
+
+.like {
+  position: relative;
+  left: 610px;
+  margin-bottom: 30px;
+}
