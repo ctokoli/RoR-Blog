@@ -21,7 +21,7 @@ class PostsController < ApplicationController
     @post = Post.new(
       author: @user,
       title: params[:post][:title],
-      text: params[:post][:text],
+      text: params[:post][:text]
     )
 
     if @post.save
