@@ -14,13 +14,14 @@
                     <p>Number of posts: <%= @user.postsCounter%></p>
                 </div>
               </div>
-            
         </div>
         <div class="bio">
             <h3>Bio</h3>
             <p><%= @user.bio%></p>
         </div>
-        
+        <div class="post-btn">
+          <a href="/users/<%= @user.id%>/posts/new"><button>Add Post</button></a>
+        </div>
         <div class="posts ">
           <%if @posts.empty?%>
             <h2>No Post yet</h2>
