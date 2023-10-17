@@ -1,7 +1,11 @@
 <div class="container">
         <div class="content-container">
             <div class="image">
-              <%=image_tag @user.photo%>
+              <% if @user.photo.present? %>
+                <%= image_tag @user.photo %>
+              <% else %>
+                <%= tag.p 'default_profile.png' %> <!-- Replace 'default_profile.png' with your default image path -->
+              <% end %>
             </div>
             
               <div class="content">
@@ -19,13 +23,13 @@
           <a href="/users/<%= @user.id%>/posts/new"><button>Add Post</button></a>
         </div>
         <div class="posts ">
-          <%if @posts.empty?%>
+          <%if @user.posts.empty?%>
             <h2>No Post yet</h2>
           <%end%>
-          <% @posts.each_with_index do |post, index| %>
+          <% @user.posts.each_with_index do |post, index| %>
           <a href="/users/<%= post.author_id%>/posts/<%= post.id%>">
             <div class="post-content bio">
-                <h3>Post# <%= index+1 %></h3>
+                <h3><%= post.title %> <%= index+1 %></h3>
                 <p><%= post.text%></p>
                 <div class="counts-section">
                    <div class="counts">
