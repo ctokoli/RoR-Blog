@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Post, type: :model do
-  subject { Post.new(title: 'Title', author: User.create(name: 'KOJO')) }
+  subject { Post.new(title: 'Title', author: User.create(name: 'KOJO', photo: 'https://www.pngegg.com/en/png-wgjix')) }
 
   describe 'Post Model title validation tests' do
     it 'should have title present' do
