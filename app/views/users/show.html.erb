@@ -1,7 +1,11 @@
 <div class="container">
         <div class="content-container">
             <div class="image">
-              <%=image_tag @user.photo%>
+              <% if @user.photo.present? %>
+                <%= image_tag @user.photo %>
+              <% else %>
+                <%= tag.p 'default_profile.png' %> <!-- Replace 'default_profile.png' with your default image path -->
+              <% end %>
             </div>
             
               <div class="content">
@@ -28,7 +32,7 @@
           <%end%>
           <% @posts.each_with_index do |post, index| %>
             <div class="post-content bio">
-                <a href="/users/<%= post.author_id%>/posts"><h3>Post# <%= index+1 %></h3></a>
+                <a href="/users/<%= post.author_id%>/posts"><h3><%=post.title %> <%= index+1 %></h3></a>
                 <p><%= post.text%></p>
                 <div class="counts">
                     <p>Comments: <%= post.comments_counter%></p>
@@ -36,6 +40,9 @@
                 </div>
             </div>
           <%end%>
+          <a href="/users/<%= @user.id%>/posts">
+          <button>See All Posts</button>
+          </a>
         </div>
 </div>
 
