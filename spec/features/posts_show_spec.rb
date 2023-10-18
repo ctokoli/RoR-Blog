@@ -2,7 +2,8 @@ require 'rails_helper'
 
 RSpec.feature 'Post Show Page' do
   before(:each) do
-    @user1 = User.create(name: 'user1', bio: 'I live in Bogota', photo: 'https://www.pngegg.com/en/png-wgjix', postsCounter: 0)
+    @user1 = User.create(name: 'user1', bio: 'I live in Bogota', photo: 'https://www.pngegg.com/en/png-wgjix',
+                         postsCounter: 0)
     @user2 = User.create(name: 'User2')
     @post = Post.create(author_id: @user1.id, title: 'Hello', comments_counter: 2, likes_counter: 1, text: 'Post body')
     @comment = Comment.create(user_id: @user2.id, post_id: @post.id, text: 'my comment')
