@@ -9,8 +9,6 @@ RSpec.feature 'Post Show Page' do
     @comment = Comment.create(user_id: @user2.id, post_id: @post.id, text: 'my comment')
   end
 
-  
-  
   scenario 'I can see who wrote the post.' do
     visit user_post_path(@user1, @post)
     expect(page).to have_content(@user1.name)
