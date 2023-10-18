@@ -2,7 +2,8 @@ require 'rails_helper'
 
 RSpec.feature 'Post Index Page' do
   before(:each) do
-    @user1 = User.create(name: 'user1', bio: 'Am a Welder from Kenya', photo: 'https://www.pngegg.com/en/png-wgjix', postsCounter: 2)
+    @user1 = User.create(name: 'user1', bio: 'Am a Welder from Kenya', photo: 'https://www.pngegg.com/en/png-wgjix',
+                         postsCounter: 2)
     @user2 = User.create(name: 'user2')
     @post1 = Post.create(author_id: @user1.id, title: 'Hello')
     @post2 = Post.create(author_id: @user1.id, title: 'World', text: 'Hi men', comments_counter: 1, likes_counter: 2)
