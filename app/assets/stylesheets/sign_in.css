@@ -1,0 +1,24 @@
+body {
+    margin: 0;
+    place-items: center;
+    height: 100vh;
+    display: grid;
+}
+
+.field {
+    margin-bottom: 10px;
+}
+
+#user_email, #user_password, #user_password_confirmation, #user_name, #user_bio, #user_photo{
+    width: 300px;
+    padding: 10px;
+}
+
+
+.actions input {
+    width: 323px;
+    padding: 9px 0px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
