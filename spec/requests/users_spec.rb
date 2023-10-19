@@ -9,7 +9,7 @@ RSpec.describe 'Controllers', type: :request do
       expect(response.body).to include('Harry')
     end
   end
-  
+
   describe 'GET /show' do
     it 'returns http success and renders the show template' do
       get '/users/1'

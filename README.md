@@ -97,6 +97,11 @@ rspec spec
 - Twitter: [@Ctokoli](https://twitter.com/ctokoli)
 - LinkedIn: [Cephas Tokoli](https://www.linkedin.com/in/ctokoli)
 
+👤 **Rabaya Rabu**
+
+- GitHub: [@rabayarabu](https://github.com/rabayarabu)
+- Twitter: [@rabaya_rabu](https://twitter.com/rabaya_rabu)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/rabaya-rabu-142721169/)
 
 <!-- FUTURE FEATURES -->
 

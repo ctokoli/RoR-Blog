@@ -5,7 +5,7 @@
           <%end%>
             <div class="post-content bio">
                 <div class="counts-section-top"> 
-                     <h3>Post# <%= @post.id %>  <%= @user.name %></h3>
+                     <h3><%= @post.title %> | <%= @user.name %> <%= @post.id %></h3>
                     <div class="counts">
                         <p>Comments: <%= @post.comments_counter%></p>
                         <p>Likes: <%= @post.likes_counter%></p>
