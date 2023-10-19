@@ -1,6 +1,14 @@
 class ApplicationController < ActionController::Base
-  def current_user
-    @current_user ||= User.find_by(id: params[:user_id])
-  end
+  before_action :authenticate_user!
+  before_action :configure_permitted_parameters, if: :devise_controller?
   helper_method :current_user
+  def after_sign_in_path_for(_resource)
+    users_path
+  end
+
+  protected
+
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.permit(:sign_up, keys: %i[name email photo bio password password_confirmation])
+  end
 end
