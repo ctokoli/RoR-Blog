@@ -5,7 +5,11 @@
     <%@users.each do |user|%>
         <div class="content-container">
             <div class="image">
-            <%=image_tag user.photo%>
+            <% if user.photo.present? %>
+                <%= image_tag user.photo %>
+              <% else %>
+                <%= tag.p 'default_profile.png' %> <!-- Replace 'default_profile.png' with your default image path -->
+              <% end %>
             </div>
             
               <div class="content">

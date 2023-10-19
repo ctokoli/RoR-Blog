@@ -6,7 +6,7 @@ RSpec.describe 'Controllers', type: :request do
       get '/users'
       expect(response).to have_http_status(:success)
       expect(response).to render_template(:index)
-      expect(response.body).to include('This page contains a list of Users')
+      expect(response.body).to include('Harry')
     end
   end
 
@@ -15,7 +15,7 @@ RSpec.describe 'Controllers', type: :request do
       get '/users/1'
       expect(response).to have_http_status(:success)
       expect(response).to render_template(:show)
-      expect(response.body).to include('More details of a specific user')
+      expect(response.body).to include('Harry')
     end
   end
 end

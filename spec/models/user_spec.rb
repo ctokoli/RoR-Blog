@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  subject { User.new(name: 'Tom') }
+  subject { User.new(name: 'Tom', photo: 'https://www.pngegg.com/en/png-wgjix') }
   describe 'User Model Name validation tests' do
     it 'should have name present' do
       subject.name = 'Tom'
@@ -16,7 +16,7 @@ RSpec.describe User, type: :model do
 
   describe 'User Model method tests' do
     it 'should return three recent posts' do
-      author = User.create(name: 'Harry')
+      author = User.create(name: 'Harry', photo: 'https://www.pngegg.com/en/png-wgjix')
       post4 = Post.create(title: 'Title4', author: author)
       post5 = Post.create(title: 'Title5', author: author)
       post6 = Post.create(title: 'Title6', author: author)
