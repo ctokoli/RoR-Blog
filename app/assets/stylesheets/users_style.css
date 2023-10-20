@@ -70,6 +70,7 @@ ul.list {
 .comments.bio {
   margin-top: -10px;
   margin-bottom: 77px;
+  padding-bottom: 23px;
 }
 
 .counts-section-top {
@@ -122,4 +123,15 @@ input.btn.center-btn {
   background-color: #f2f2f2;
   padding: 5px 10px;
   border: 1px solid;
+}
+
+.delete-post {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 18px;
+}
+
+.display{
+  visibility: hidden;
 }
