@@ -13,4 +13,15 @@ Rails.application.routes.draw do
       resources :likes, only: %i[new create]
     end
   end
+
+  namespace :api do
+    resources :users, only: %i[none] do
+      resources :posts, only: %i[index]
+    end
+    
+   
+    resources :posts, only: %i[none] do
+      resources :comments, only: %i[index new create]
+    end
+  end
 end
