@@ -8,9 +8,8 @@ class PostsController < ApplicationController
       format.html do
         render :index
       end
-      
+
       format.json do
-        
         render json: @user.posts
       end
     end
