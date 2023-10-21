@@ -2,7 +2,7 @@ class Api::CommentsController < ApplicationController
   def index
     @post = Post.find(params[:post_id])
     @comments = @post.comments
-      render json: @comments
+    render json: @comments
   end
 
   def new
@@ -26,8 +26,8 @@ class Api::CommentsController < ApplicationController
     end
   end
 
-  
   private
+
   def comment_params
     params.require(:comment).permit(:text)
   end
