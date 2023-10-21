@@ -8,9 +8,8 @@ class CommentsController < ApplicationController
       format.html do
         render :index
       end
-      
+
       format.json do
-        
         render json: @comment
       end
     end
