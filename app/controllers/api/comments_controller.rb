@@ -1,18 +1,8 @@
-class CommentsController < ApplicationController
-  load_and_authorize_resource
-  before_action :set_post
-
+class Api::CommentsController < ApplicationController
   def index
+    @post = Post.find(params[:post_id])
     @comments = @post.comments
-    respond_to do |format|
-      format.html do
-        render :index
-      end
-
-      format.json do
-        render json: @comment
-      end
-    end
+    render json: @comments
   end
 
   def new
@@ -36,22 +26,7 @@ class CommentsController < ApplicationController
     end
   end
 
-  def destroy
-    @comment = @post.comments.find(params[:id])
-    @comment.destroy
-    if @comment.destroy
-      flash[:notice] = 'Comment was successfully deleted'
-    else
-      flash[:alert] = 'Oops! Cannot delete your comment.'
-    end
-    redirect_to user_post_path(@post.author_id, @post.id)
-  end
-
   private
-
-  def set_post
-    @post = Post.find(params[:post_id])
-  end
 
   def comment_params
     params.require(:comment).permit(:text)
